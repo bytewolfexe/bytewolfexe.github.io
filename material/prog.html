@@ -1424,34 +1424,34 @@ Console<span class="token punctuation">.</span><span class="token function">Writ
 <h3 class="atx" id="podmieneny-prikaz-popisat-vykonanie-na-co-sluzi">podmieneny prikaz (popisat vykonanie, na co sluzi)</h3>
 <p>Podmieneni prikaz sluzi na zmenu toku programu na zaklade urcitych podmienok. Medzi zakladne klucove slovo, ktore sa nachadza takmer v kazdom programovacom jazyku, patria if / else if / else. </p>
 <p>Syntax je </p>
-<pre><code class="fenced-code-block language-c++">if(podmienka) 
-{
-    akcia1();
-}
-else if(ina_podmienka)
-{
-    akcia2();
-}
-else
-{
-    ina_akcia();
-}</code></pre>
+<pre><code class="fenced-code-block language-cpp"><span class="token keyword">if</span><span class="token punctuation">(</span>podmienka<span class="token punctuation">)</span> 
+<span class="token punctuation">{</span>
+    <span class="token function">akcia1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>ina_podmienka<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">akcia2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span>
+<span class="token punctuation">{</span>
+    <span class="token function">ina_akcia</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 class="atx" id="prepinac-switch">prepinac (switch)</h3>
 <p>Prikaz switch je dalsi podmieneni prikaz, nachadzajuci sa vo vacsine jazykov odvodenych od prog. j. C. Oproti <strong>if</strong> je kompaktnejsi, a teda sa pouziva na miestach, kde chceme na zakladne hodnoty jednej premennej vykonat rozne akcie. </p>
 <p>Syntax je nasledovna:</p>
-<pre><code class="fenced-code-block language-c++">switch(premenna)
-{
-    case prva_hodnota:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;akcia1();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-&nbsp;&nbsp;&nbsp;&nbsp;case druha_hodnota:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case dalsia_mozna_hodnota:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;akcia2();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-&nbsp;&nbsp;&nbsp;&nbsp;default:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prikaz_vykonany_ak_ine_nie_su_slpnene();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-}</code></pre>
+<pre><code class="fenced-code-block language-cpp"><span class="token keyword">switch</span><span class="token punctuation">(</span>premenna<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">case</span> prva_hodnota<span class="token operator">:</span>
+        <span class="token function">akcia1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> druha_hodnota<span class="token operator">:</span>
+        <span class="token keyword">case</span> dalsia_mozna_hodnota<span class="token operator">:</span>
+            <span class="token function">akcia2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+        <span class="token function">prikaz_vykonany_ak_ine_nie_su_slpnene</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <h3 class="atx" id="cykly-kedy-na-co-sluzia-co-umoznuju-druhy-cyklov">cykly (kedy, na co sluzia, co umoznuju), druhy cyklov</h3>
 <p>Cykly sluzia na opakovane volanie urcitej casti kodu. Cyklus sa opakuje dovtedy, dokial nie je splnena urcita podmienka. Pozname cykly for, while a do while.</p>
 <p><strong>for</strong> sluzi na opakovanie, pokial je hodnota v urcitom rozsahu (pri postupnom inkrementovani alebo dekrementovani), alebo na iterovanie kontajnerov (C# / C++).</p>
@@ -1490,6 +1490,78 @@ else
 <p>Struktury a triedy su zoskupenia viacerych premennych roznych datovych typov do jednotnych celkov. Zo struktur a tried vytvarame instancie, takzvane objekty. Vieme im tiez priradzovat funkcionalitu, ktora funguje s premennymi danej instancie (takzvane metody). Instancie mozu mat aj "zdielane" premenne - staticke premenne. Rozdiel medzi nimi je, ze struktury maju od zakladu verejne metody a premenne, zatial co triedy su od zakladu sukromne.</p>
 <h3 class="atx" id="kontajnery-a-kolekcie-vyhody--nevyhody-oproti-poliam">Kontajnery a kolekcie (vyhody / nevyhody oproti poliam)</h3>
 <h3 class="atx" id="tuzemsky-platobny-styk">Tuzemsky platobny styk</h3>
+<h1 class="atx" id="21objektovo-orientovane-programovanie">21.Objektovo orientovane programovanie</h1>
+<h3 class="atx" id="porovnajte-oop-z-proceduralnym-programovanim">Porovnajte OOP z proceduralnym programovanim</h3>
+<p>Proceduralne programovanie je jeden z prvych principov programovania - jedna sa o rozklad komplikovanejsich, opakovanych operacii do jednotlivych mensich procedur, ktore su opakovatelne volatelne (funkcie, metody)</p>
+<p>Objektovo orientovane programovanie je princip programovania, pri ktorom vytvarame jednu "sablonu" s metodami a datami, ktoru mozme opakovane vytvarat (instancovat)</p>
+<h3 class="atx" id="charakterizujte-zakladne-pojmy-oop-cleny-triedy-objekt">Charakterizujte zakladne pojmy OOP (cleny, triedy, objekt)</h3>
+<p>Trieda - je to "sablona" pre vytvaranie objektov, urcujeme metody, datove cleny, a pod.</p>
+<p>Clen - premenna alebo funkcia (metoda) patriaca triede, alebo jej nadradenej triede</p>
+<p>Objekt - instancia triedy, samostatne fungujuci celok</p>
+<h3 class="atx" id="pristupove-modifikatory-public-private-protected">Pristupove modifikatory (public, private, protected)</h3>
+<p>Pristupove modifikatory upravuju pristup k clenom triedy, z hladiska vonkajsku (metody mimo triedu), a odvodenych tried</p>
+<p>public - k clenovi sa da dostat z vonkajsku aj z odvodenej triedy</p>
+<p>private - k clenovi sa da dostat iba z triedy ktora vlastni tento clen</p>
+<p>protected - k clenovi sa da dostat z triedy ktora vlastni tento clen, alebo z triedy odvodenej</p>
+<h3 class="atx" id="charakterizujte-pristupove-metody-gettery--settery">Charakterizujte pristupove metody (gettery / settery)</h3>
+<p>Gettery - vracaju hodnotu nejakej premennej</p>
+<p>Settery - nastavuju hodnotu nejakej premennej</p>
+<h3 class="atx" id="ako-su-objekty-konstruovane-a-destruovane">Ako su objekty konstruovane a destruovane</h3>
+<p>V C# su objekty konstruovane pomocou klucoveho slova new, a destruovane vtedy, ked vyjdu z aktivneho rozsahu programu.</p>
+<p><code>Objekt obj = new Objekt();</code></p>
+<p>V C++ su 2 sposoby:</p>
+<ul>
+<li><p>stack based - konstruovane na riadku prislusnym menom triedy, a destruovane, ak vyjdu z aktivneho rozsahu programu. <code>Objekt obj;</code></p>
+</li>
+<li><p>dynamic allocation (heap based) - konstruovane pomocou klucoveho slova new, destruovane iba pomocou klucoveho slova delete</p>
+<pre><code class="fenced-code-block language-cpp">Objekt<span class="token operator">*</span> obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Objekt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token keyword">delete</span> obj<span class="token punctuation">;</span></code></pre>
+</li>
+</ul>
+<h3 class="atx" id="staticke--nestaticke-cleny-triedy">Staticke / nestaticke cleny triedy</h3>
+<p>Nestaticke cleny triedy su take, ktore su "jedinecne" pre kazdy objekt.</p>
+<p>Staticke cleny triedy su take, ktore su zdielane napriec objektami danej triedy.</p>
+<h3 class="atx" id="dedicnost-konstruktor-bazovej-triedy-predefinovanie-metody">Dedicnost, konstruktor bazovej triedy, predefinovanie metody</h3>
+<p>Dedicnost je prevedenie clenov a funkcionality jednej triedy do novej, rozsirenej triedy.</p>
+<p>Odvodena trieda pri konstruovani vola konstruktor bazovej (t.j. dedenej) triedy ako prvy.</p>
+<p>Predefinovanie metody znamena zmenenie jej funkcionality v odvodenej triede.</p>
+<pre><code class="fenced-code-block language-csharp"><span class="token keyword">class</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token function">A</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Nazdar od A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">pozdrav</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"AAA"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">B</span> <span class="token punctuation">:</span> <span class="token type-list"><span class="token class-name">A</span></span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token function">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token keyword">base</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Nazdar od B"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>  
+
+<span class="token keyword">public</span> <span class="token keyword">virtual</span> <span class="token return-type class-name"><span class="token keyword">void</span></span> <span class="token function">pozdrav</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">override</span> 
+<span class="token punctuation">{</span>
+    Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"BBB"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token class-name">B</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token constructor-invocation class-name">B</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">pozdrav</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+vystup<span class="token punctuation">:</span>
+Nazdar od A
+Nazdar od B
+BBB</code></pre>
+<h3 class="atx" id="projekt-4c1tema21---trieda--odvodena-trieda--2x-instancia-odvodenej-triedy">Projekt: 4C1Tema21 - trieda + odvodena trieda + 2x instancia odvodenej triedy</h3>
+<p>21 Charakterizujte banku a popiste zakladne bankove operacie</p>
+<p>20 Ukazovatel celkovej urovne a bohatstva krajiny</p>
+<p>18 Vysvetlite pojem trhovy mechanizmus a popiste procesy ktore ho tvoria</p>
+<p>15 Charakterizujte mzdu ako cenu prace na trhu, vypocitajte cistu mzdu zamestnanca podniku</p>
 </article>
 </body>
 </html>
